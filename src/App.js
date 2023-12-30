@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function App() {
   return (
     <div className="App">
-      <MyStyled>hello React</MyStyled>
+      <MyStyled bgColor={"Red"}>hello React</MyStyled>
     </div>
   );
 }
@@ -18,7 +18,7 @@ const MyStyled = styled.div`
   &:hover {
     background-color: #ddd;
   }
-  background-color: yellow;
+  background-color: ${(props) => (props.bgColor)};
 `;
 
 export default App;
